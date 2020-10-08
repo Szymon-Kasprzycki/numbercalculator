@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konwersja liczbowa</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <h1>Zamiana systemów liczbowych</h1>
+    <div class="wrapper">
+        <div class="number-before-change">
+            <p>Z jakiego systemu chcesz przekonwertować liczbę?</p>
+            <label for="number-from-binary"><input id="number-from-binary" class="numberfrom" type="radio"
+                    name="z-jakiego-systemu" value="2" />Z systemu dwójkowego (binarnego)</label>
+            <label for="number-from-quad"><input id="number-from-quad" class="numberfrom" type="radio"
+                    name="z-jakiego-systemu" value="4" />Z
+                systemu
+                czwórkowego</label>
+            <label for="number-from-octal"><input id="number-from-octal" class="numberfrom" type="radio"
+                    name="z-jakiego-systemu" value="8" />Z
+                systemu
+                ósemkowego</label>
+            <label for="number-from-hexadecimal"><input id="number-from-hexadecimal" class="numberfrom" type="radio"
+                    name="z-jakiego-systemu" value="16" />Z systemu
+                szesnastkowego</label>
+            <label for="number-from-decimal"><input id="number-from-decimal" class="numberfrom" type="radio"
+                    name="z-jakiego-systemu" value="10" />Z systemu
+                dziesiętnego</label>
+            <label for=""><input id="number-from" type="text" name="z-jakiego-systemu"
+                    placeholder="Liczba pierwotna" /></label>
+        </div>
+
+        <div class="number-after-change">
+            <p>Na jaki system chcesz przekonwertować liczbę?</p>
+            <label for="number-in-binary"><input id="number-in-binary" class="numberto" type="radio"
+                    name="na-jaki-system" value="2" />Na
+                system dwójkowy (binarny)</label>
+            <label for="number-in-quad"><input id="number-in-quad" class="numberto" type="radio" name="na-jaki-system"
+                    value="4" />Z
+                systemu
+                czwórkowego</label>
+            <label for="number-in-octal"><input id="number-in-octal" class="numberto" type="radio" name="na-jaki-system"
+                    value="8" />Na
+                system
+                ósemkowy</label>
+            <label for="number-in-hexadecimal"><input id="number-in-hexadecimal" class="numberto" type="radio"
+                    name="na-jaki-system" value="16" />Na system
+                szesnastkowy</label>
+            <label for="number-in-decimal"><input id="number-in-decimal" class="numberto" type="radio"
+                    name="na-jaki-system" value="10" />Na system dziesiętny</label>
+            <h3>Wynik:<span id="result"></span></h3>
+        </div>
+    </div>
+    <button onclick="CheckRadio()">Oblicz</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
