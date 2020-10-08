@@ -1,14 +1,10 @@
-let numberFromBinary = $('#number-from-binary');
 let wynik;
-// document.getElementById('answer').innerHTML = '1';
 
 function CheckRadio() {
     var RadioButtons = document.querySelectorAll(".numberfrom");
     for (let i = 0; i < RadioButtons.length; i++) {
         if (RadioButtons[i].checked) {
-            // document.getElementById('answer').innerHTML = RadioButtons[i].value;
             const myNumber = document.querySelector('#number-from').value;
-            let answer = null;
             let power = 0;
             wynik = 0;
             if (RadioButtons[i].value == 2) {
