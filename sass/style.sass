@@ -1,0 +1,64 @@
+@import 'variables'
+@import 'mixins'
+
+html
+    font-size: 10px
+    font-family: arial
+
+h1
+    font-size: 5rem
+    text-align: center
+    text-transform: uppercase
+div.wrapper
+    margin: 0 auto
+
+div.number-before-change, div.number-after-change
+    display: flex
+    flex-wrap: wrap
+    margin-top: 50px
+    p
+        font-size: 3.5rem
+        flex-basis: 100%
+        text-align: center
+    label
+        font-size: 2rem
+        flex-basis: 20%
+        text-align: center
+        cursor: pointer
+        &:nth-last-child(1)
+            +resultinput(3rem, 50px)
+            input
+                box-sizing: border-box
+                font-size: 3rem
+                border: 2px solid black
+                border-radius: 10px
+                transition: .1s
+                &:focus
+                    outline: none
+                    border: 2px solid black
+                    border-radius: 10px
+                    transform: scale(1.1)
+    h3
+        +resultinput(4rem, 50px)
+        text-transform: uppercase
+button
+    font-size: 3rem
+    text-transform: uppercase
+    background-color: #6699aa
+    border-radius: 50px
+    box-shadow: 0
+    border: 3px solid black
+    padding: 10px 20px
+    text-align: center
+    position: absolute
+    bottom: 150px
+    left: 50%
+    transform: translateX(-50%)
+    transition: .2s
+    &:hover
+        cursor: pointer
+        color: white
+        transform: translateX(-50%) scale(1.05)
+        background-color: #77aabb
+span
+    font-size: 4rem
