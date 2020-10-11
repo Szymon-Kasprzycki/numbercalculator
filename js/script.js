@@ -55,7 +55,7 @@ function CheckRadio() {
                 for (let i = (myNumber.length - 1); i >= 0; i--) {
                     const hexaDecimal = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
                     if (hexaDecimal.indexOf(myNumber[i]) == -1) {
-                        alert("Liczba " + myNumber + " nie jest liczbą w systemie szesnastkowym! (litery w liczbie powinny być zapisane jako wielkie!!!)");
+                        alert("Liczba " + myNumber + " nie jest liczbą w systemie szesnastkowym!");
                         wynik = "";
                         return;
                     }
