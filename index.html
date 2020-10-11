@@ -14,7 +14,7 @@
         <div class="number-before-change">
             <p>Z jakiego systemu chcesz przekonwertować liczbę?</p>
             <label for="number-from-binary"><input id="number-from-binary" class="numberfrom" type="radio"
-                    name="z-jakiego-systemu" value="2" />Z systemu dwójkowego (binarnego)</label>
+                    name="z-jakiego-systemu" value="2" checked />Z systemu dwójkowego (binarnego)</label>
             <label for="number-from-quad"><input id="number-from-quad" class="numberfrom" type="radio"
                     name="z-jakiego-systemu" value="4" />Z
                 systemu
@@ -39,9 +39,9 @@
                     name="na-jaki-system" value="2" />Na
                 system dwójkowy (binarny)</label>
             <label for="number-in-quad"><input id="number-in-quad" class="numberto" type="radio" name="na-jaki-system"
-                    value="4" />Z
-                systemu
-                czwórkowego</label>
+                    value="4" />Na
+                system
+                czwórkowy</label>
             <label for="number-in-octal"><input id="number-in-octal" class="numberto" type="radio" name="na-jaki-system"
                     value="8" />Na
                 system
@@ -50,8 +50,8 @@
                     name="na-jaki-system" value="16" />Na system
                 szesnastkowy</label>
             <label for="number-in-decimal"><input id="number-in-decimal" class="numberto" type="radio"
-                    name="na-jaki-system" value="10" />Na system dziesiętny</label>
-            <h3>Wynik:<span id="result"></span></h3>
+                    name="na-jaki-system" value="10" checked />Na system dziesiętny</label>
+            <h3>Wynik: <span id="result"></span></h3>
         </div>
     </div>
     <button onclick="CheckRadio()">Oblicz</button>

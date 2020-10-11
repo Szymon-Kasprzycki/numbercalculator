@@ -1,4 +1,5 @@
 let wynik;
+let x;
 
 function CheckRadio() {
     var RadioButtons = document.querySelectorAll(".numberfrom");
@@ -9,43 +10,85 @@ function CheckRadio() {
             wynik = 0;
             if (RadioButtons[i].value == 2) {
                 for (let i = (myNumber.length - 1); i >= 0; i--) {
-                    wynik += myNumber[i] * Math.pow(2, power);
-                    power++
+                    // while (x < myNumber.length) {
+                    const binary = [0, 1]
+                    if (binary.indexOf(parseInt(myNumber[i], 10)) == -1) {
+                        alert("Liczba " + myNumber + " nie jest liczbą binarną!");
+                        x = myNumber.length;
+                        wynik = "";
+                        return;
+                    }
+                    else {
+                        wynik += myNumber[i] * Math.pow(2, power);
+                        power++;
+                    }
                 }
             }
-            else if (RadioButtons[i].value == 4) {
+
+            if (RadioButtons[i].value == 4) {
                 for (let i = (myNumber.length - 1); i >= 0; i--) {
-                    wynik += myNumber[i] * Math.pow(4, power);
-                    power++
+                    // while (x < myNumber.length) {
+                    const quad = [0, 1, 2, 3]
+                    if (quad.indexOf(parseInt(myNumber[i], 10)) == -1) {
+                        alert("Liczba " + myNumber + " nie jest liczbą w systemie czwórkowym!");
+                        x = myNumber.length;
+                        wynik = "";
+                        return;
+                    }
+                    else {
+                        wynik += myNumber[i] * Math.pow(4, power);
+                        power++;
+                    }
                 }
             }
-            else if (RadioButtons[i].value == 8) {
+            if (RadioButtons[i].value == 8) {
                 for (let i = (myNumber.length - 1); i >= 0; i--) {
-                    wynik += myNumber[i] * Math.pow(8, power);
-                    power++
+                    // while (x < myNumber.length) {
+                    const octal = [0, 1, 2, 3, 4, 5, 6, 7]
+                    if (octal.indexOf(parseInt(myNumber[i], 10)) == -1) {
+                        alert("Liczba " + myNumber + " nie jest liczbą w systemie ósemkowym!");
+                        x = myNumber.length;
+                        wynik = "";
+                        return;
+                    }
+                    else {
+                        wynik += myNumber[i] * Math.pow(8, power);
+                        power++;
+                    }
                 }
             }
             // DO DOPRACOWANIA
-            else if (RadioButtons[i].value == 16) {
-                // for (let i = (myNumber.length - 1); i >= 0; i--) {
-                //     if (myNumber[i] == "A") { myNumber[i] = 10 }
-                //     else if (myNumber[i] == "B") { myNumber[i] = 11 }
-                //     else if (myNumber[i] == "C") { myNumber[i] = 12 }
-                //     else if (myNumber[i] == "D") { myNumber[i] = 13 }
-                //     else if (myNumber[i] == "E") { myNumber[i] = 14 }
-                //     else if (myNumber[i] == "F") { myNumber[i] = 15 }
-                //     wynik += myNumber[i] * Math.pow(16, power);
-                //     console.log(wynik);
-                //     document.getElementById('answer').innerHTML = wynik;
-                //     power++
-                // }
-                wynik = parseInt(myNumber, 16);
+            if (RadioButtons[i].value == 16) {
+                for (let i = (myNumber.length - 1); i >= 0; i--) {
+                    // while (x < myNumber.length) {
+                    const hexaDecimal = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+                    if (hexaDecimal.indexOf(parseInt(myNumber[i], 10)) == -1) {
+                        alert("Liczba " + myNumber + " nie jest liczbą w systemie szesnastkowym! (litery w liczbie powinny być zapisane jako wielkie!!!)");
+                        x = myNumber.length;
+                        wynik = "";
+                        return;
+                    }
+                    else {
+                        wynik = parseInt(myNumber, 16);
+                    }
+                }
             }
-            else if (RadioButtons[i].value == 10) {
-                wynik = parseInt(myNumber);
+            if (RadioButtons[i].value == 10) {
+                for (let i = (myNumber.length - 1); i >= 0; i--) {
+                    const decimal = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+                    if (decimal.indexOf(myNumber[i]) == -1) {
+                        alert("Liczba " + myNumber + " nie jest liczbą w systemie dziesiętnym!");
+                        wynik = "";
+                        return;
+                    }
+                    else {
+                        wynik = parseInt(myNumber);
+                    }
+                }
             }
         }
     }
+
     var secondRadioButtons = document.querySelectorAll(".numberto");
     for (let i = 0; i < RadioButtons.length; i++) {
         if (secondRadioButtons[i].checked) {
@@ -66,5 +109,5 @@ function CheckRadio() {
             }
         }
     }
-    document.getElementById('result').innerHTML = ' ' + wynik;
+    document.getElementById('result').innerHTML = wynik;
 }
